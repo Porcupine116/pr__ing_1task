@@ -1,0 +1,29 @@
+# Core
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.4.0
+requests>=2.31.0
+
+# Observability
+prometheus-client>=0.20.0
+opentelemetry-api>=1.24.0
+opentelemetry-sdk>=1.24.0
+opentelemetry-exporter-otlp>=1.24.0
+opentelemetry-instrumentation-fastapi>=0.45b0
+opentelemetry-instrumentation-requests>=0.45b0
+structlog>=24.1.0
+
+# RecSys / Two-tower (CPU)
+torch>=2.2.0
+
+# Notebooks
+jupyter>=1.0.0
+matplotlib>=3.8.0
+
+# Dev
+pytest>=8.0.0
+

@@ -1,0 +1,20 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+# Примечание:
+# Для простого учебного стенда мы НЕ поднимаем Langfuse внутри compose,
+# т.к. self-hosted Langfuse обычно требует БД.
+# В отчёте описано, как его подключают в реальном проекте.
+
